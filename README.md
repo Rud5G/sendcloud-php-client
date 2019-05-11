@@ -48,6 +48,18 @@ $parcel->order_number = 'ORDER2014-52321';
 $parcel->save();
 ```
 
+## Get a single shipping method
+Returns a Parcel object
+```php
+$parcel = $sendCloud->shippingMethods()->find(1);
+```
+
+## Get a single shipping method with additional query parameters
+Returns a Parcel object
+```php
+$parcel = $sendCloud->shippingMethods()->find(1, ['sender_address' => 1]);
+```
+
 ## Exceptions
 Actions to the API may cause an Exception to be thrown in case something went wrong
 ```php
